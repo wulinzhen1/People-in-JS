@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象转为数组</title>
+</head>
+<body>
+    <script>
+        var scoreObject = {
+            "Tony": {
+                "Math": 95,
+                "English": 79,
+                "Music": 68
+            },
+            "Simon": {
+                "Math": 100,
+                "English": 95,
+                "Music": 98
+            },
+            "Annie": {
+                "Math": 54,
+                "English": 65,
+                "Music": 88
+            }
+        }
+        /*如上有一个用来存储学习成绩的对象，编写一个函数，将其转为如下的二维数组
+          var scoreArray = [
+          ["Tony", 95, 79, 68],
+          ……
+          ];*/
+        console.log(scoreObject);
+        var arr1 = [];
+        var arr2 = [];
+        var arr3 = [];
+        var scoreArray = [];
+        arr1.push("Tony");
+        arr1.push(scoreObject.Tony.Math);
+        arr1.push(scoreObject.Tony.English);
+        arr1.push(scoreObject.Tony.Music);
+        console.log(arr1);
+
+        arr2.push("Simon");
+        arr2.push(scoreObject.Simon.Math);
+        arr2.push(scoreObject.Simon.English);
+        arr2.push(scoreObject.Simon.Music);
+        console.log(arr2);
+
+        arr3.push("Annie");
+        arr3.push(scoreObject.Annie.Math);
+        arr3.push(scoreObject.Annie.English);
+        arr3.push(scoreObject.Annie.Music);
+        console.log(arr3);
+
+        scoreArray.push(arr1,arr2,arr3);
+        console.log(scoreArray);
+
+            for (var i in scoreObject){
+                scoreObject[i];
+                console.log(scoreObject[i]);
+            }
+    </script>
+</body>
+</html>

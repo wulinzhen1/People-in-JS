@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort()4</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ];
+        /*将上面数组分别按元素对象的value值从小到大进行排序后输出*/
+        var x = arr.sort(comparef);
+        console.log(x);
+        function comparef(a,b) {
+            return a.value - b.value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array4</title>
+</head>
+<body>
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：applelt;-pear</p>
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="font-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+
+<script>
+    /*实现如阅读材料中，队列的相关进栈、退栈、获取栈顶、判空的操作
+      栈顶对应数组中第一个元素
+      进栈和退栈操作后，需要在 id 为 stack-cont 的 p 标签中更新显示栈中的内容，
+      栈顶在最左侧，中间用 -< 连接（练习使用数组的join方法）*/
+    var stack = ["apple", "pear"];
+    var text = document.getElementById('stack-input');
+    var pp = document.getElementById('stack-cont');
+    var btns = document.querySelectorAll('button');
+
+    btns[0].onclick = function () {
+        stack.unshift(text.value);
+        pp.innerHTML = stack.join("<-");
+    }
+
+    btns[1].onclick = function () {
+        stack.shift();
+        pp.innerHTML = stack.join("<-");
+    }
+
+    btns[2].onclick = function () {
+        pp.innerHTML = stack[0];
+    }
+
+    btns[3].onclick = function () {
+        if (stack.length === 0){
+            pp.innerHTML = "栈为空";
+        }
+        else {
+            pp.innerHTML = "栈不为空";
+        }
+    }
+</script>
+</body>
+</html>

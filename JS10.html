@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort()2</title>
+</head>
+<body>
+    <script>
+        var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+        /*将上面数组分别按字母顺序a-z及z-a进行排序，在console中输出*/
+        var x = arr.sort();
+        console.log(x);
+
+        var y = [];
+        for (var i=0;i<x.length;i++) {
+            y[i] = x[x.length - 1 - i];
+        }
+        console.log(y);
+
+    </script>
+</body>
+</html>

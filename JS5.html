@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array1</title>
+</head>
+<body>
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+<script>
+    /*练习如何使用数组来实现队列，综合考虑使用数组的 push，pop，shift，unshift操作*/
+    /*实现如阅读材料中，队列的相关入队、出队、获取队头、判空的操作
+      队头对应数组中最后一个元素
+      入队和出队操作后，需要在 id 为 queue-cont 的 p 标签中更新显示队列中的内容，
+      队头在最右侧，中间用 -> 连接（练习使用数组的join方法）*/
+    var queue = ["apple", "pear"];
+    var btns = document.querySelectorAll('button');
+    var text = document.getElementById('queue-input');
+    var pp = document.getElementById('queue-cont');
+
+    btns[0].onclick = function () {
+        queue.unshift(text.value);
+        pp.innerHTML = queue.join("->");
+    }
+
+    btns[1].onclick = function () {
+        queue.pop();
+        pp.innerHTML = queue.join("->");
+    }
+
+    btns[2].onclick = function () {
+        pp.innerHTML = queue[0];
+    }
+
+    btns[3].onclick = function () {
+        if (queue.length === 0){
+            pp.innerHTML = "队列为空";
+        }
+        else {
+            pp.innerHTML = "队列不为空";
+        }
+    }
+</script>
+</body>
+</html>

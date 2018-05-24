@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort()1</title>
+</head>
+<body>
+    <script>
+        var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+        /*将上面数组分别按从大到小以及从小到大进行排序后在console中输出*/
+        var x = arr.sort(comparefunction);
+        function comparefunction(a,b) {
+            return a - b;
+        }
+        console.log(x);
+
+        var  y = arr.sort(comparefun);
+        function comparefun(a,b) {
+            return b - a;
+        }
+        console.log(y);
+    </script>
+</body>
+</html>
